@@ -1,6 +1,7 @@
 .home {
     padding: 0px 10px;
     padding-bottom: 100px;
+    background:linear-gradient(rgba(155, 89, 182, 0.15), rgba(142, 68, 173, 0.15));
 }
 .hero{
     max-width: 600px;
@@ -83,23 +84,58 @@ border: none;
     color: #ff4646;
     text-align: center;
 }
-@media(max-with:768px){
-    .table-layout{
-        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+@media (max-width: 768px) {
+    .hero {
+      padding: 20px 10px;
     }
-    .market-cap{
-        display: none;
+  
+    .hero h1 {
+      font-size: 28px;
     }
-}
-
-@media (max-with: 500px){
+  
+    .hero p {
+      width: 100%;
+      font-size: 18px;
+    }
+  
+    .hero form {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .crypto-table {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .table-layout {
+      grid-template-columns: 0.5fr 3fr 1fr 1fr;
+      padding: 15px 10px;
+    }
+  
+    .market-cap {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .hero h1 {
+      font-size: 24px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .hero form input {
+      width: 100px;
+    }
+  
     .table-layout div img {
-        width: 25px;
+      width: 25px;
     }
-    .table-layout{
-        font-size: 13px;
+  
+    .table-layout {
+      font-size: 13px;
     }
-    .hero form input{
-        width: 100px;
-    }
-}
+  }

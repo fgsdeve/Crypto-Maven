@@ -22,7 +22,6 @@ const Linechart = ({ historicalData }) => {
       chartType="LineChart"
       data={data}
       height="300px"
-      width= '150%, center' 
       options={{
         legend: { position: "bottom" },
         hAxis: { title: "Date" },

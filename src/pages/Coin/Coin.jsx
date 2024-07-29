@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Coin.css";
 import { useParams } from "react-router-dom";
 import { CoinContext } from "../../context/CoinContext";
-import Linechart from "../../compenents/LineChart/Linechart";
+import Linechart from "../../components/LineChart/Linechart";
 
 const Coin = () => {
   const { coinId } = useParams();
@@ -41,7 +41,10 @@ const Coin = () => {
     };
 
     try {
-      const response = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options);
+      const response = await fetch(
+        `https://api.coingecko.com/api/v3/coins/${coinId}`,
+        options
+      );
       const data = await response.json();
       setCoinData(data);
     } catch (err) {
@@ -76,19 +79,33 @@ const Coin = () => {
           </ul>
           <ul>
             <li>Current Price</li>
-            <li>{currency.symbol} {coinData.market_data.current_price[currency.name].toLocaleString()}</li>
+            <li>
+              {currency.symbol}{" "}
+              {coinData.market_data.current_price[
+                currency.name
+              ].toLocaleString()}
+            </li>
           </ul>
           <ul>
             <li>Market Capital</li>
-            <li>{currency.symbol} {coinData.market_data.market_cap[currency.name].toLocaleString()}</li>
+            <li>
+              {currency.symbol}{" "}
+              {coinData.market_data.market_cap[currency.name].toLocaleString()}
+            </li>
           </ul>
           <ul>
             <li>24 Hour high</li>
-            <li>{currency.symbol} {coinData.market_data.high_24h[currency.name].toLocaleString()}</li>
+            <li>
+              {currency.symbol}{" "}
+              {coinData.market_data.high_24h[currency.name].toLocaleString()}
+            </li>
           </ul>
           <ul>
             <li>24 Hour low</li>
-            <li>{currency.symbol} {coinData.market_data.low_24h[currency.name].toLocaleString()}</li>
+            <li>
+              {currency.symbol}{" "}
+              {coinData.market_data.low_24h[currency.name].toLocaleString()}
+            </li>
           </ul>
         </div>
       </div>
