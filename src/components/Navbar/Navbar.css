@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:linear-gradient(rgba(155, 89, 182, 0.15), rgba(142, 68, 173, 0.15));
+  background: linear-gradient(rgba(155, 89, 182, 0.15), rgba(142, 68, 173, 0.15));
   font-size: 1.5vw;
   padding: 10px 10%;
   color: #ddd;
@@ -53,43 +53,43 @@
 .navbar button img {
   width: 15px;
 }
-@media (max-width: 900px){
-  .navbar{
+@media (max-width: 900px) {
+  .navbar {
     padding: 20px 8%;
   }
-  .navbar button{
+  .navbar button {
     gap: 8px;
     padding: 8px 18px;
     font-size: 14px;
   }
 }
-@media (max-width: 768px){
-  .navbar{
+@media (max-width: 768px) {
+  .navbar {
     padding: 20px 5%;
   }
-  .navbar ul{
+  .navbar ul {
     display: none;
   }
-  .navbar button img{
+  .navbar button img {
     width: 12px;
   }
-  /*Additional media query for very small screens */
-  @media (max-width: 480px) {
-    .navbar {
-      flex-direction: column; /* Stack items vertically */
-      align-items: flex-start;
-      padding: 10px 5%;
-    }
-    .nav-right {
-      width: 100%; /* Make the right section take full width */
-      justify-content: space-between;
-    }
-    .navbar .logo {
-      width: 40px; /* Adjust logo size */
-    }
-    .navbar button {
-      width: 100%; /* Make button take full width */
-      justify-content: center;
-    }
+}
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    padding: 10px 5%;
+  }
+  .nav-right {
+    width: 100%; /* Make the right section take full width */
+    justify-content: space-between;
+  }
+  .navbar .logo {
+    width: 40px; /* Adjust logo size */
+  }
+  .navbar button {
+    width: 100%; /* Make button take full width */
+    justify-content: center;
   }
 }
